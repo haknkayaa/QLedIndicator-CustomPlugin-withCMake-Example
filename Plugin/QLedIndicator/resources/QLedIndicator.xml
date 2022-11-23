@@ -1,0 +1,22 @@
+<ui language="c++">
+  <widget class="QLedIndicator" name="qLedIndicator">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>280</width>
+        <height>24</height>
+      </rect>
+    </property>
+  </widget>
+  <customwidgets>
+    <customwidget>
+      <class>QLedIndicator</class>
+      <propertyspecifications>
+        <stringpropertyspecification name="state" notr="true" type="singleline"/>
+<!--        <stringpropertyspecification name="labelText" type="singleline"/>-->
+<!--        <stringpropertyspecification name="buttonText" type="singleline"/>-->
+      </propertyspecifications>
+    </customwidget>
+  </customwidgets>
+</ui>

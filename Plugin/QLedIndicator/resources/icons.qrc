@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>green_light.png</file>
+        <file>red_light.png</file>
+        <file>yellow_light.png</file>
+        <file>QLedIndicator.xml</file>
+    </qresource>
+</RCC>
