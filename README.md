@@ -32,10 +32,14 @@ If I have time, I will try to explain in detail.
 
 coming soon...
 
+## Development Environment:
+- Qt 5.15.2
+- CMake 3.20.2
+- MinGW 8.1.0
+- Windows 11
+
 ## Contact
 Hakan Kaya
 - [Mail](mailto:mail@hakankaya.kim)
 - [Linkedin](https://www.linkedin.com/in/haknkayaa/)
 
-Description
-Custom Widgets Plugin Example for Qt Designer with CMake
