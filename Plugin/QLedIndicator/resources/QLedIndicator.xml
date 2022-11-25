@@ -13,9 +13,13 @@
     <customwidget>
       <class>QLedIndicator</class>
       <propertyspecifications>
+        <!-- type: richtext | multiline | singleline | stylesheet | objectname | url -->
+        <!-- notr: true | false  -->
         <stringpropertyspecification name="state" notr="true" type="singleline"/>
-<!--        <stringpropertyspecification name="labelText" type="singleline"/>-->
-<!--        <stringpropertyspecification name="buttonText" type="singleline"/>-->
+        <stringpropertyspecification name="label" type="singleline"/>
+        <stringpropertyspecification name="icon" type="singleline"/>
+        <stringpropertyspecification name="indicatorStyle" type="singleline"/>
+        <stringpropertyspecification name="iconSize" type="multiline"/>
       </propertyspecifications>
     </customwidget>
   </customwidgets>

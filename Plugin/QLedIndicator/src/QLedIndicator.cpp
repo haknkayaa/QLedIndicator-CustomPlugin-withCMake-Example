@@ -4,7 +4,11 @@
 QLedIndicator::QLedIndicator(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::QLedIndicator),
-    m_state(false)
+    m_label("LedIndicator"),
+    m_state(false),
+    m_icon(":/red_light.png"),
+    m_indicatorStyle(IndicatorStyle::TextBesideIcon),
+    m_iconSize(20, 20)
 {
     ui->setupUi(this);
 }
@@ -24,6 +28,7 @@ void QLedIndicator::setLabel(const QString &newLabel)
     if (m_label == newLabel)
         return;
     m_label = newLabel;
+    ui->label->setText(m_label);
     emit labelChanged();
 }
 
@@ -58,3 +63,47 @@ void QLedIndicator::setState(bool newState)
     }
     emit stateChanged();
 }
+
+QLedIndicator::IndicatorStyle QLedIndicator::indicatorStyle() const {
+    return m_indicatorStyle;
+}
+
+void QLedIndicator::setIndicatorStyle(QLedIndicator::IndicatorStyle newIndicatorStyle) {
+    if (m_indicatorStyle == newIndicatorStyle)
+        return;
+    m_indicatorStyle = newIndicatorStyle;
+
+    if(m_indicatorStyle == IndicatorStyle::TextOnly){
+        ui->icon->setVisible(false);
+        ui->label->setVisible(true);
+    }else if(m_indicatorStyle == IndicatorStyle::IconOnly){
+        ui->icon->setVisible(true);
+        ui->label->setVisible(false);
+    }else if(m_indicatorStyle == IndicatorStyle::TextUnderIcon){
+        ui->icon->setVisible(true);
+        ui->label->setVisible(true);
+        ui->label->setAlignment(Qt::AlignCenter);
+    }else if(m_indicatorStyle == IndicatorStyle::TextBesideIcon){
+        ui->icon->setVisible(true);
+        ui->label->setVisible(true);
+        ui->label->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+    }
+
+    emit indicatorStyleChanged();
+}
+
+QSize QLedIndicator::iconSize() const {
+    return m_iconSize;
+}
+
+void QLedIndicator::setIconSize(QSize newIconSize) {
+    if (m_iconSize == newIconSize)
+        return;
+    m_iconSize = newIconSize;
+    ui->icon->setFixedSize(m_iconSize);
+    emit iconSizeChanged();
+}
+
+
+
+

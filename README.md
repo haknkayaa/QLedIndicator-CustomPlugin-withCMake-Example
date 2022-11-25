@@ -18,6 +18,16 @@ If I have time, I will try to explain in detail.
 - Then run QtDesigner. In the "Custom Widgets" tab, you will see a widget named "QLedIndicator".
   You can drag and use it as you wish.
 
+## Includes:
+### QLedIndicator:
+![img.png](docs/img_1.png)
+- label: The text to be displayed on the widget.
+- icon: The icon to be displayed on the widget.
+- state: The state of the widget. (On / Off)
+- indicatorStyle: The style of the widget.
+- iconSize: The size of the icon to be displayed on the widget.
+
+
 ## How can you write your own plugin?
 
 coming soon...
@@ -27,3 +37,5 @@ Hakan Kaya
 - [Mail](mailto:mail@hakankaya.kim)
 - [Linkedin](https://www.linkedin.com/in/haknkayaa/)
 
+Description
+Custom Widgets Plugin Example for Qt Designer with CMake
