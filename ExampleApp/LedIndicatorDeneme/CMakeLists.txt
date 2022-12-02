@@ -7,7 +7,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-if(WIN32)
+if (WIN32)
     message("OS: ${CMAKE_SYSTEM_NAME}")
     set(QT_DIR "C:\\DevTools\\Qt\\5.15.2\\mingw81_64\\lib\\cmake\\Qt5")
     set(QT_QPA_PLATFORM_PLUGIN_PATH "C:\\DevTools\\Qt\\5.15.2\\mingw81_64\\plugins\\platforms")
@@ -15,12 +15,12 @@ if(WIN32)
 
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
     set(BUILD_SHARED_LIBS TRUE)
-else()
+else ()
     message("OS: ${CMAKE_SYSTEM_NAME}")
     set(QT_DIR "/opt/Qt/5.15.2/gcc_64/lib/cmake/Qt5")
     set(QT_QPA_PLATFORM_PLUGIN_PATH "/opt/Qt/5.15.2/gcc_64/plugins/platforms")
     set(QT_PLUGIN_PATH "/opt/Qt/5.15.2/gcc_64/plugins")
-endif()
+endif ()
 
 set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} ${QT_DIR})
 
@@ -41,5 +41,7 @@ target_link_libraries(HelloWorld PRIVATE
         Qt5::Core
         Qt5::Widgets
         Qt5::Gui
+
+        # Custom Plugin
         ${CMAKE_BINARY_DIR}/libQLedIndicator.dll
         )

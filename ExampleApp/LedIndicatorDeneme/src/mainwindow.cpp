@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
            ui->qLedIndicator_2->setState(false);
        } else{
            ui->qLedIndicator_2->setState(true);
+           ui->qLedIndicator_2->setIndicatorStyle(QLedIndicator::TextUnderIcon);
        }
     });
 }

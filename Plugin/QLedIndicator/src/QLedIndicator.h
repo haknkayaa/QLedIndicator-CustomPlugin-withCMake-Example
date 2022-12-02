@@ -18,7 +18,7 @@ Q_OBJECT
     Q_PROPERTY(QSize iconSize READ iconSize WRITE setIconSize NOTIFY iconSizeChanged)
 
 public:
-    enum class IndicatorStyle {
+    enum IndicatorStyle {
         TextOnly,
         IconOnly,
         TextUnderIcon,
